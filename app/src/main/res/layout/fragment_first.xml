@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/baseConstraint"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".FirstFragment">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:background="@color/white"
+            android:text=""
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card"
+            style="@style/Widget.Material3.CardView.Filled"
+            android:layout_width="match_parent"
+            android:layout_height="245dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="35dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/textInputLayout"
+                            style="@style/Widget.Design.TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/input"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@null"
+                                    android:inputType="text"
+                                    android:paddingStart="20dp"
+                                    android:paddingEnd="20dp"
+                                    android:textAlignment="textEnd"
+                                    android:textColor="@color/white"
+                                    android:textSize="75sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:id="@+id/result"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/white"
+                            android:textSize="30dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintVertical_bias="0.9"
+                            app:layout_constraintHorizontal_bias="0.9"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <androidx.compose.ui.platform.ComposeView
+            android:id = "@+id/buttonTable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card"
+            app:layout_constraintVertical_bias="0.0"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.6" />
+
+
+        <!--        <TableLayout-->
+<!--            android:layout_width="409dp"-->
+<!--            android:layout_height="479dp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/card">-->
+
+<!--                <TableRow-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="20dp">-->
+
+<!--                        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--                            android:id="@+id/sqroot"-->
+<!--                            style="@style/ThemeOverlay.Material3.Button.TextButton"-->
+<!--                            android:layout_width="88dp"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:src="@drawable/root"-->
+<!--                            android:elevation="12dp"-->
+<!--                            app:tint="@color/white"-->
+<!--                            android:layout_marginEnd="20dp"-->
+<!--                            android:backgroundTint="@color/material_dynamic_secondary20"-->
+<!--                            tools:layout_editor_absoluteX="248dp"-->
+<!--                            tools:layout_editor_absoluteY="469dp" />-->
+
+<!--                        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--                            android:id="@+id/pi"-->
+<!--                            style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"-->
+<!--                            android:layout_width="76dp"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:backgroundTint="@color/material_dynamic_secondary20"-->
+<!--                            android:src="@drawable/pi"-->
+<!--                            app:tint="@color/white"-->
+<!--                            android:layout_marginEnd="20dp"-->
+<!--                            tools:layout_editor_absoluteX="248dp"-->
+<!--                            tools:layout_editor_absoluteY="469dp" />-->
+
+<!--                        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--                            android:id="@+id/exponent"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            style="@style/ThemeOverlay.Material3.Button.TextButton"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:textColor="@color/white"-->
+<!--                            android:src="@drawable/ic_baseline_keyboard_arrow_up_24"-->
+<!--                            app:tint="@color/white"-->
+<!--                            android:backgroundTint="@color/material_dynamic_secondary20"-->
+<!--                            tools:layout_editor_absoluteX="248dp"-->
+<!--                            android:layout_marginEnd="20dp"-->
+<!--                            tools:layout_editor_absoluteY="469dp" />-->
+<!--                        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--                            android:id="@+id/factorial"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            style="@style/ThemeOverlay.Material3.Button.TextButton"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:src="@drawable/exclamation_new"-->
+<!--                            app:tint="@color/white"-->
+<!--                            android:textColor="@color/white"-->
+<!--                            android:backgroundTint="@color/material_dynamic_secondary20"-->
+<!--                            tools:layout_editor_absoluteX="248dp"-->
+<!--                            android:layout_marginEnd="20dp"-->
+<!--                            tools:layout_editor_absoluteY="469dp" />-->
+
+<!--                        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--                            android:id="@+id/dropdown"-->
+<!--                            style="@style/ThemeOverlay.Material3.Button.TextButton"-->
+<!--                            android:layout_width="58dp"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:backgroundTint="@color/material_dynamic_secondary20"-->
+<!--                            android:src="@drawable/ic_baseline_arrow_drop_down_24"-->
+<!--                            app:tint="@color/white"-->
+<!--                            tools:layout_editor_absoluteX="248dp"-->
+<!--                            tools:layout_editor_absoluteY="469dp" />-->
+<!--                </TableRow>-->
+
+<!--                <TableRow-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_marginStart="20dp"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:layout_marginBottom="5dp">-->
+
+<!--                        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                            android:layout_width="379dp"-->
+<!--                            android:layout_height="match_parent">-->
+
+<!--                                <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--                                    android:id="@+id/clear"-->
+<!--                                    style="@style/fabStyle"-->
+<!--                                    android:layout_width="70dp"-->
+<!--                                    android:layout_height="70dp"-->
+<!--                                    android:clickable="true"-->
+<!--                                    android:src="@drawable/exclamation_new"-->
+<!--                                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                    app:layout_constraintEnd_toStartOf="@id/bracket"-->
+<!--                                    app:layout_constraintHorizontal_bias="0.0"-->
+<!--                                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                                    app:layout_constraintVertical_bias="0.0" />-->
+
+<!--                                <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--                                    android:id="@+id/bracket"-->
+<!--                                    style="@style/fabStyle"-->
+<!--                                    android:layout_width="70dp"-->
+<!--                                    android:layout_height="70dp"-->
+<!--                                    android:layout_marginStart="10dp"-->
+<!--                                    android:clickable="true"-->
+<!--                                    android:src="@drawable/exclamation_new"-->
+<!--                                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                    app:layout_constraintEnd_toEndOf="@id/percentage"-->
+<!--                                    app:layout_constraintStart_toStartOf="@id/clear"-->
+<!--                                    app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                                <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--                                    android:id="@+id/percentage"-->
+<!--                                    style="@style/fabStyle"-->
+<!--                                    android:layout_width="70dp"-->
+<!--                                    android:layout_height="70dp"-->
+<!--                                    android:layout_marginStart="10dp"-->
+<!--                                    android:clickable="true"-->
+<!--                                    android:src="@drawable/exclamation_new"-->
+<!--                                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                    app:layout_constraintEnd_toEndOf="@id/divide"-->
+<!--                                    app:layout_constraintStart_toStartOf="@id/bracket"-->
+<!--                                    app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                                <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--                                    android:id="@+id/divide"-->
+<!--                                    style="@style/fabStyle"-->
+<!--                                    android:layout_width="70dp"-->
+<!--                                    android:layout_height="70dp"-->
+<!--                                    android:layout_marginStart="10dp"-->
+<!--                                    android:clickable="true"-->
+<!--                                    android:src="@drawable/exclamation_new"-->
+<!--                                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                                    app:layout_constraintHorizontal_bias="1.0"-->
+<!--                                    app:layout_constraintStart_toStartOf="@id/percentage"-->
+<!--                                    app:layout_constraintTop_toTopOf="parent" />-->
+<!--                        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--                        -->
+<!--                </TableRow>-->
+
+<!--                <TableRow-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_marginStart="20dp"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:layout_marginBottom="5dp">-->
+
+<!--                        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                            android:layout_width="379dp"-->
+<!--                            android:layout_height="match_parent">-->
+
+<!--                                <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--                                    android:id="@+id/clear"-->
+<!--                                    style="@style/fabStyle"-->
+<!--                                    android:layout_width="70dp"-->
+<!--                                    android:layout_height="70dp"-->
+<!--                                    android:clickable="true"-->
+<!--                                    android:src="@drawable/exclamation_new"-->
+<!--                                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                    app:layout_constraintEnd_toEndOf="@id/bracket"-->
+<!--                                    app:layout_constraintHorizontal_bias="0.0"-->
+<!--                                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                                    app:layout_constraintVertical_bias="0.0" />-->
+
+<!--                                <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--                                    android:id="@+id/bracket"-->
+<!--                                    style="@style/fabStyle"-->
+<!--                                    android:layout_width="70dp"-->
+<!--                                    android:layout_height="70dp"-->
+<!--                                    android:layout_marginStart="10dp"-->
+<!--                                    android:clickable="true"-->
+<!--                                    android:src="@drawable/exclamation_new"-->
+<!--                                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                    app:layout_constraintEnd_toEndOf="@id/percentage"-->
+<!--                                    app:layout_constraintStart_toStartOf="@id/clear"-->
+<!--                                    app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                                <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--                                    android:id="@+id/percentage"-->
+<!--                                    style="@style/fabStyle"-->
+<!--                                    android:layout_width="70dp"-->
+<!--                                    android:layout_height="70dp"-->
+<!--                                    android:layout_marginStart="10dp"-->
+<!--                                    android:clickable="true"-->
+<!--                                    android:src="@drawable/exclamation_new"-->
+<!--                                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                    app:layout_constraintEnd_toEndOf="@id/divide"-->
+<!--                                    app:layout_constraintStart_toStartOf="@id/bracket"-->
+<!--                                    app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                                <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--                                    android:id="@+id/divide"-->
+<!--                                    style="@style/fabStyle"-->
+<!--                                    android:layout_width="70dp"-->
+<!--                                    android:layout_height="70dp"-->
+<!--                                    android:layout_marginStart="10dp"-->
+<!--                                    android:clickable="true"-->
+<!--                                    android:src="@drawable/exclamation_new"-->
+<!--                                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                                    app:layout_constraintHorizontal_bias="1.0"-->
+<!--                                    app:layout_constraintStart_toStartOf="@id/percentage"-->
+<!--                                    app:layout_constraintTop_toTopOf="parent" />-->
+<!--                        </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--                </TableRow>-->
+<!--                -->
+<!--                <TableRow-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_marginStart="20dp"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:layout_marginBottom="5dp">-->
+
+<!--                        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                            android:layout_width="379dp"-->
+<!--                            android:layout_height="match_parent">-->
+
+<!--                                <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--                                    android:id="@+id/clear"-->
+<!--                                    style="@style/fabStyle"-->
+<!--                                    android:layout_width="70dp"-->
+<!--                                    android:layout_height="70dp"-->
+<!--                                    android:clickable="true"-->
+<!--                                    android:src="@drawable/exclamation_new"-->
+<!--                                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                    app:layout_constraintEnd_toEndOf="@id/bracket"-->
+<!--                                    app:layout_constraintHorizontal_bias="0.0"-->
+<!--                                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                                    app:layout_constraintVertical_bias="0.0" />-->
+
+<!--                                <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--                                    android:id="@+id/bracket"-->
+<!--                                    style="@style/fabStyle"-->
+<!--                                    android:layout_width="70dp"-->
+<!--                                    android:layout_height="70dp"-->
+<!--                                    android:layout_marginStart="10dp"-->
+<!--                                    android:clickable="true"-->
+<!--                                    android:src="@drawable/exclamation_new"-->
+<!--                                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                    app:layout_constraintEnd_toEndOf="@id/percentage"-->
+<!--                                    app:layout_constraintStart_toStartOf="@id/clear"-->
+<!--                                    app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                                <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--                                    android:id="@+id/percentage"-->
+<!--                                    style="@style/fabStyle"-->
+<!--                                    android:layout_width="70dp"-->
+<!--                                    android:layout_height="70dp"-->
+<!--                                    android:layout_marginStart="10dp"-->
+<!--                                    android:clickable="true"-->
+<!--                                    android:src="@drawable/exclamation_new"-->
+<!--                                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                    app:layout_constraintEnd_toEndOf="@id/divide"-->
+<!--                                    app:layout_constraintStart_toStartOf="@id/bracket"-->
+<!--                                    app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                                <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--                                    android:id="@+id/divide"-->
+<!--                                    style="@style/fabStyle"-->
+<!--                                    android:layout_width="70dp"-->
+<!--                                    android:layout_height="70dp"-->
+<!--                                    android:layout_marginStart="10dp"-->
+<!--                                    android:clickable="true"-->
+<!--                                    android:src="@drawable/exclamation_new"-->
+<!--                                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                                    app:layout_constraintHorizontal_bias="1.0"-->
+<!--                                    app:layout_constraintStart_toStartOf="@id/percentage"-->
+<!--                                    app:layout_constraintTop_toTopOf="parent" />-->
+<!--                        </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--                </TableRow>-->
+<!--                -->
+<!--                <TableRow-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_marginStart="20dp"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:layout_marginBottom="5dp">-->
+
+<!--                        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                            android:layout_width="379dp"-->
+<!--                            android:layout_height="match_parent">-->
+
+<!--                                <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--                                    android:id="@+id/clear"-->
+<!--                                    style="@style/fabStyle"-->
+<!--                                    android:layout_width="70dp"-->
+<!--                                    android:layout_height="70dp"-->
+<!--                                    android:clickable="true"-->
+<!--                                    android:src="@drawable/exclamation_new"-->
+<!--                                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                    app:layout_constraintEnd_toEndOf="@id/bracket"-->
+<!--                                    app:layout_constraintHorizontal_bias="0.0"-->
+<!--                                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                                    app:layout_constraintVertical_bias="0.0" />-->
+
+<!--                                <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--                                    android:id="@+id/bracket"-->
+<!--                                    style="@style/fabStyle"-->
+<!--                                    android:layout_width="70dp"-->
+<!--                                    android:layout_height="70dp"-->
+<!--                                    android:layout_marginStart="10dp"-->
+<!--                                    android:clickable="true"-->
+<!--                                    android:src="@drawable/exclamation_new"-->
+<!--                                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                    app:layout_constraintEnd_toEndOf="@id/percentage"-->
+<!--                                    app:layout_constraintStart_toStartOf="@id/clear"-->
+<!--                                    app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                                <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--                                    android:id="@+id/percentage"-->
+<!--                                    style="@style/fabStyle"-->
+<!--                                    android:layout_width="70dp"-->
+<!--                                    android:layout_height="70dp"-->
+<!--                                    android:layout_marginStart="10dp"-->
+<!--                                    android:clickable="true"-->
+<!--                                    android:src="@drawable/exclamation_new"-->
+<!--                                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                    app:layout_constraintEnd_toEndOf="@id/divide"-->
+<!--                                    app:layout_constraintStart_toStartOf="@id/bracket"-->
+<!--                                    app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                                <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--                                    android:id="@+id/divide"-->
+<!--                                    style="@style/fabStyle"-->
+<!--                                    android:layout_width="70dp"-->
+<!--                                    android:layout_height="70dp"-->
+<!--                                    android:layout_marginStart="10dp"-->
+<!--                                    android:clickable="true"-->
+<!--                                    android:src="@drawable/exclamation_new"-->
+<!--                                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                                    app:layout_constraintHorizontal_bias="1.0"-->
+<!--                                    app:layout_constraintStart_toStartOf="@id/percentage"-->
+<!--                                    app:layout_constraintTop_toTopOf="parent" />-->
+<!--                        </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--                </TableRow>-->
+<!--                -->
+<!--                <TableRow-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_marginStart="20dp"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:layout_marginBottom="5dp">-->
+
+<!--                        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                            android:layout_width="379dp"-->
+<!--                            android:layout_height="match_parent">-->
+
+<!--                                <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--                                    android:id="@+id/clear"-->
+<!--                                    style="@style/fabStyle"-->
+<!--                                    android:layout_width="70dp"-->
+<!--                                    android:layout_height="70dp"-->
+<!--                                    android:clickable="true"-->
+<!--                                    android:src="@drawable/exclamation_new"-->
+<!--                                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                    app:layout_constraintEnd_toEndOf="@id/bracket"-->
+<!--                                    app:layout_constraintHorizontal_bias="0.0"-->
+<!--                                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                                    app:layout_constraintVertical_bias="0.0" />-->
+
+<!--                                <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--                                    android:id="@+id/bracket"-->
+<!--                                    style="@style/fabStyle"-->
+<!--                                    android:layout_width="70dp"-->
+<!--                                    android:layout_height="70dp"-->
+<!--                                    android:layout_marginStart="10dp"-->
+<!--                                    android:clickable="true"-->
+<!--                                    android:src="@drawable/exclamation_new"-->
+<!--                                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                    app:layout_constraintEnd_toEndOf="@id/percentage"-->
+<!--                                    app:layout_constraintStart_toStartOf="@id/clear"-->
+<!--                                    app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                                <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--                                    android:id="@+id/percentage"-->
+<!--                                    style="@style/fabStyle"-->
+<!--                                    android:layout_width="70dp"-->
+<!--                                    android:layout_height="70dp"-->
+<!--                                    android:layout_marginStart="10dp"-->
+<!--                                    android:clickable="true"-->
+<!--                                    android:src="@drawable/exclamation_new"-->
+<!--                                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                    app:layout_constraintEnd_toEndOf="@id/divide"-->
+<!--                                    app:layout_constraintStart_toStartOf="@id/bracket"-->
+<!--                                    app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                                <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--                                    android:id="@+id/divide"-->
+<!--                                    style="@style/fabStyle"-->
+<!--                                    android:layout_width="70dp"-->
+<!--                                    android:layout_height="70dp"-->
+<!--                                    android:layout_marginStart="10dp"-->
+<!--                                    android:clickable="true"-->
+<!--                                    android:src="@drawable/exclamation_new"-->
+<!--                                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                                    app:layout_constraintHorizontal_bias="1.0"-->
+<!--                                    app:layout_constraintStart_toStartOf="@id/percentage"-->
+<!--                                    app:layout_constraintTop_toTopOf="parent" />-->
+<!--                        </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--                </TableRow>-->
+<!--        </TableLayout>-->
+
+
+        <!--        <TextView-->
+<!--            android:id="@+id/textview_first"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:text="@string/lorem_ipsum"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/button_first" />-->
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="cardColor">#004C69</color>
+    <color name="statusBarColor">#004C69</color>
+    <color name="backgroundColor">#22313C</color>
+    <color name="clearButtonColor">#E5DEFF</color>
+    <color name="buttonColor">#B5CAD7</color>
+    <color name="equalColor">#C1E8FE</color>
+    <color name="errorColor">#F2B8B4</color>
+</resources>
