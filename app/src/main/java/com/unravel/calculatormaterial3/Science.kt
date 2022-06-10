@@ -124,7 +124,7 @@ fun RowS1(
             isText = true,
             textColor = Color.White,
             text = "nCr",
-            textSize = 14,
+            textSize = 12,
             visibility = visibility
         ) {
             if(!input.text.toString().isEmpty())
@@ -257,6 +257,7 @@ fun RowS2(
             scale = 1f,
             isText = true,
             text = "nPr",
+
             textColor = Color.Black,
             visibility = visibility
         ) {

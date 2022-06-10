@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/ysris/AndroidStudioProjects/Material-Calculator/app/src/main/res/layout/activity_main.xml" value="0.152" />
+        <entry key="..\:/Users/ysris/AndroidStudioProjects/Material-Calculator/app/src/main/res/layout/content_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ysris/AndroidStudioProjects/Material-Calculator/app/src/main/res/layout/fragment_first.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ysris/AndroidStudioProjects/Material-Calculator/app/src/main/res/layout/fragment_second.xml" value="0.25416666666666665" />
         <entry key="app/src/main/res/drawable-v24/top_row_button_background.xml" value="0.2235" />
         <entry key="app/src/main/res/drawable/backspace-48px.xml" value="0.1635" />
         <entry key="app/src/main/res/drawable/custom_card.xml" value="0.2235" />

@@ -399,7 +399,8 @@ fun Row2(
             size =ButtonSize,
             s ="divide",
             scale = 0.8f,
-            isText = false,
+            isText = true,
+            text = "/",
             tint = Color.Unspecified,
             visibility = visibility
         ) {
@@ -497,7 +498,8 @@ fun Row3(
             size =ButtonSize,
             s ="multiply",
             scale = 0.3f,
-            isText = false,
+            isText = true,
+            text = "x",
             tint = Color.Unspecified,
             visibility = visibility
         ) {
@@ -691,7 +693,8 @@ fun Row5(
             size =ButtonSize,
             s ="add",
             scale = 0.8f,
-            isText = false,
+            isText = true,
+            text = "+",
             tint = Color.Unspecified,
             visibility = visibility
         ) {
@@ -781,7 +784,7 @@ fun Row6(
             tint = Color.Black
         ) {
             val s: String = input.text.toString()
-            if(!s.isEmpty())
+            if(s.isNotEmpty())
             {
                 input.setText(s.substring(0, s.length-removal(dataBase)))
                 dataBase.list.removeAt(dataBase.list.size-1)
@@ -796,7 +799,8 @@ fun Row6(
             size =ButtonSize,
             s ="equal",
             scale = 0.8f,
-            isText = false,
+            isText = true,
+            text = "=",
             tint = Color.Unspecified,
             visibility = visibility
         ) {
